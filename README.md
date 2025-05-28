@@ -1,1 +1,5 @@
 # Bulk_16S_SangerSeq_Summary
+
+This script is made to take in dozens to hundreds (maybe more?) sequence files from Sanger sequencing and perform a quick BLAST on them to identify the most likely species (Note: there coupld be multiple species with this same sequence...). Briefly, this script will trim the reads (first 50 and truncates at 950 bases if longer than that) and keep only those that are "high quality based on that [note: there is no PHRED, homopolymer or ammbiguous base filtering in the current script]. After Filtering, the "high quality" sequences are BLASTed against a collection of 16S rRNA gene sequences from type material [High quality database sequences]. After that, the data are compiled and mapped back into a summary table. 
+
+You will need the R script, the full lenght 16S rRNA gene database (supplies - last updated Fall 2023), your target Seq files, and a local installation of BLAST+ on your machine (download here: https://ftp.ncbi.nlm.nih.gov/blast/executables/blast+/LATEST/)
